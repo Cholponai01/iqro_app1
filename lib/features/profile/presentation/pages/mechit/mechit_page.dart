@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iqro/config/theme/app_colors.dart';
-import 'package:iqro/features/profile/data/models/mechit_address_model/mechit_address_model.dart';
+import 'package:iqro/features/profile/presentation/pages/mechit/mechit_address_model/mechit_address_model.dart';
 import 'package:iqro/features/profile/presentation/widgets/mechit_row_widget/mechit_row_widget.dart';
 
 class MechitPage extends StatefulWidget {

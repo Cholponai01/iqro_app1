@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
-import 'package:iqro/features/profile/data/models/mechit_address_model/mechit_address_model.dart';
+import 'package:iqro/features/profile/presentation/pages/mechit/mechit_address_model/mechit_address_model.dart';
 import 'package:iqro/features/profile/presentation/pages/mechit/mechit_geolocation.dart';
 import 'package:iqro/features/profile/presentation/pages/mechit/mechit_search_map.dart';
 

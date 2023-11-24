@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iqro/config/theme/app_colors.dart';
-import 'package:iqro/features/profile/data/models/quran_sura_model/quran_sura_model.dart';
+import 'package:iqro/features/profile/presentation/pages/quran/quran_sura_model/quran_sura_model.dart';
 import 'package:iqro/features/profile/presentation/widgets/quran_row_widget/quran_row_widget.dart';
 
 class QuranPage extends StatefulWidget {

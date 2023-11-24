@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/features/profile/presentation/pages/calendar/calendar_page.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/dua_page.dart';
 import 'package:iqro/features/profile/presentation/pages/mechit/mechit_page.dart';
 import 'package:iqro/features/profile/presentation/pages/premium/premium_page.dart';
 import 'package:iqro/features/profile/presentation/pages/quran/quran_page.dart';
 import 'package:iqro/features/profile/presentation/pages/tadjvid/tadjvid_page.dart';
 import 'package:iqro/features/profile/presentation/widgets/home_screen_widgets/time_container.dart';
-import 'package:iqro/features/profile/data/models/profile_presenter_model/profile_presenter.dart';
+import 'package:iqro/features/profile/presentation/pages/home/profile_presenter_model/profile_presenter.dart';
 
 enum PresenterPage {
   tadjvidPage,
   quranPage,
-  mechitPage, /* diğer sayfalar */
+  mechitPage,
+  calendarPage,
+  duaPage, /* diğer sayfalar */
 }
 
 void _navigateToPage(BuildContext context, PresenterPage page) {
@@ -27,6 +31,14 @@ void _navigateToPage(BuildContext context, PresenterPage page) {
     case PresenterPage.mechitPage:
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const MechitPage()));
+      break;
+    case PresenterPage.calendarPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const CalendarPage()));
+      break;
+    case PresenterPage.duaPage:
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const DuaPage()));
       break;
     // Diğer sayfalar için de aynı şekilde devam edebilirsiniz
     // ...

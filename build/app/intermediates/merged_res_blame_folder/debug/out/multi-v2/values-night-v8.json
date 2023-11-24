@@ -4,7 +4,7 @@
             "outputFile": "kg.neosoft.iqro.iqro.app-mergeDebugResources-11:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\cholp\\Desktop\\iqro-app\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\iqro_app1\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

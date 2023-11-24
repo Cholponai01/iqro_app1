@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iqro/config/config.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/dua_page.dart';
 import 'package:iqro/features/profile/presentation/pages/pages.dart';
 import 'package:iqro/service_locator.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: "Hello",
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: DuaPage(),
     );
   }
 }
