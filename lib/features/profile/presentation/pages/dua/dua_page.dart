@@ -33,8 +33,8 @@ class _DuaPageState extends State<DuaPage> {
         title: const Text(
           "Дуа",
           style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w600,
+              fontSize: 15,
+              fontWeight: FontWeight.w700,
               color: AppColors.white),
         ),
       ),
