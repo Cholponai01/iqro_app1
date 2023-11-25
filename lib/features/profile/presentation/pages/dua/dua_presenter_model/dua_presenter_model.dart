@@ -102,6 +102,7 @@ const DuaPresenter dua5 = DuaPresenter(
 );
 
 List<DuaPresenter> duaPresenterList = [
+  home,
   travel,
   food,
   night,
@@ -113,6 +114,7 @@ List<DuaPresenter> duaPresenterList = [
   dua,
   dua1,
   dua2,
+  home1,
   travel1,
   food1,
   night1,
@@ -125,3 +127,15 @@ List<DuaPresenter> duaPresenterList = [
   dua4,
   dua5
 ];
+
+class DuaModel {
+  static const duaNames = [
+    "Үй бүлө үчүн окулуучу дуба",
+    "Үй алуу дубасы",
+    "Үйдү тазалоочу дуба",
+    "Label",
+    "Label",
+    "Label",
+    "Label"
+  ];
+}

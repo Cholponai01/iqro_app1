@@ -2,6 +2,46 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
 import 'package:iqro/features/profile/presentation/pages/dua/dua_presenter_model/dua_presenter_model.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/list_dua_page/food_dua_page.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/list_dua_page/home_dua_page.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/list_dua_page/night_dua_page.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/list_dua_page/time_dua_page.dart';
+import 'package:iqro/features/profile/presentation/pages/dua/list_dua_page/travel_dua_page.dart';
+
+enum PresenterPage {
+  homeDuaPage,
+  travelDuaPage,
+  foodDuaPage,
+  nightDuaPage,
+  timeDuaPage, /* diğer sayfalar */
+}
+
+void _navigateToPage(BuildContext context, PresenterPage page) {
+  switch (page) {
+    case PresenterPage.homeDuaPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const HomeDuaPage()));
+      break;
+    case PresenterPage.travelDuaPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const TravelDuaPage()));
+      break;
+    case PresenterPage.foodDuaPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const FoodDuaPage()));
+      break;
+    case PresenterPage.nightDuaPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const NightDuaPage()));
+      break;
+    case PresenterPage.timeDuaPage:
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => const TimeDuaPage()));
+      break;
+    // Diğer sayfalar için de aynı şekilde devam edebilirsiniz
+    // ...
+  }
+}
 
 class DuaPage extends StatefulWidget {
   const DuaPage({super.key});
@@ -59,22 +99,27 @@ class _DuaPageState extends State<DuaPage> {
               ),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(5, 15, 5, 15),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: SvgPicture.asset(
-                        'assets/dua_svg/${duaPresenter[index].image}.svg',
-                        width: 32,
-                        height: 32,
+                child: GestureDetector(
+                  onTap: () {
+                    _navigateToPage(context, PresenterPage.values[index]);
+                  },
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: SvgPicture.asset(
+                          'assets/dua_svg/${duaPresenter[index].image}.svg',
+                          width: 32,
+                          height: 32,
+                        ),
                       ),
-                    ),
-                    FittedBox(
-                      child: Text(duaPresenter[index].name,
-                          style: theme.textTheme.bodyMedium
-                              ?.copyWith(color: AppColors.white)),
-                    ),
-                  ],
+                      FittedBox(
+                        child: Text(duaPresenter[index].name,
+                            style: theme.textTheme.bodyMedium
+                                ?.copyWith(color: AppColors.white)),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );

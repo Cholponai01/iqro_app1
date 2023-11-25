@@ -44,40 +44,41 @@ class _QuranPageState extends State<QuranPage> {
         children: [
           Expanded(
             child: Padding(
-                padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 5,
-                  itemBuilder: (context, index) {
-                    return GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedTextIndex =
-                              index; // Metni tıkladığınızda index'i güncelleyin
-                          isPlaying =
-                              !isPlaying; // Oynatma durumunu tersine çevirin
-                        });
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        height: 89.0,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          color: selectedTextIndex == index
-                              ? const Color(
-                                  0xffFF9500) // Seçili metni sarı renkte gösterin
-                              : AppColors.bgColor,
-                        ),
-                        margin: const EdgeInsets.only(bottom: 16),
-                        child: QuranRowWidget(
-                          number: QuranSuraModel.surahNumbers[index],
-                          title: QuranSuraModel.surahNames[index],
-                          subTitle: QuranSuraModel.surahArabic[index],
-                        ),
+              padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedTextIndex =
+                            index; // Metni tıkladığınızda index'i güncelleyin
+                        isPlaying =
+                            !isPlaying; // Oynatma durumunu tersine çevirin
+                      });
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      height: 89.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: selectedTextIndex == index
+                            ? const Color(
+                                0xffFF9500) // Seçili metni sarı renkte gösterin
+                            : AppColors.bgColor,
                       ),
-                    );
-                  },
-                )),
+                      margin: const EdgeInsets.only(bottom: 16),
+                      child: QuranRowWidget(
+                        number: QuranSuraModel.surahNumbers[index],
+                        title: QuranSuraModel.surahNames[index],
+                        subTitle: QuranSuraModel.surahArabic[index],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
           Column(
             children: [
