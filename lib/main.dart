@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: "Hello",
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: DuaPage(),
+      home: HomePage(),
     );
   }
 }

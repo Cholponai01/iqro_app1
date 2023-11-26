@@ -60,12 +60,11 @@ class _QuranPageState extends State<QuranPage> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 89.0,
+                      height: MediaQuery.of(context).size.height * 0.09,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: selectedTextIndex == index
-                            ? const Color(
-                                0xffFF9500) // Seçili metni sarı renkte gösterin
+                            ? const Color(0xffFF9500)
                             : AppColors.bgColor,
                       ),
                       margin: const EdgeInsets.only(bottom: 16),

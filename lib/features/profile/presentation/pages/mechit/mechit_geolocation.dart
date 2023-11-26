@@ -48,39 +48,37 @@ class _MechitGeolocationState extends State<MechitGeolocation> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 21,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: 233,
-                    child: Text(
-                      "Разрешить приложению ikro  доступ к данным о местоположении устройства",
-                      style: theme.textTheme.titleMedium,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        isToggled = !isToggled;
-                      });
-                    },
-                    icon: Icon(isToggled ? Icons.toggle_on : Icons.toggle_off,
-                        weight: double.infinity,
-                        size: 60.0,
-                        color:
-                            isToggled ? AppColors.green : AppColors.lightgrey),
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                  ),
-                ],
-              ),
-            )
+
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 20, right: 20),
+            //   child: Row(
+            //      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //     children: [
+            //       SizedBox(
+            //         // width: 233,
+            //         child: Text(
+            //           "Разрешить приложению ikro  доступ к данным о местоположении устройства",
+            //           style: theme.textTheme.titleMedium,
+            //         ),
+            //       ),
+            // IconButton(
+            //   onPressed: () {
+            //     setState(() {
+            //       isToggled = !isToggled;
+            //     });
+            //   },
+            //   icon: Icon(isToggled ? Icons.toggle_on : Icons.toggle_off,
+            //       weight: double.infinity,
+            //       size: 60.0,
+            //       color:
+            //           isToggled ? AppColors.green : AppColors.lightgrey),
+            //   focusColor: Colors.transparent,
+            //   hoverColor: Colors.transparent,
+            //   highlightColor: Colors.transparent,
+            // ),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       ),

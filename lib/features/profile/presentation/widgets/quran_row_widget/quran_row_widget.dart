@@ -19,7 +19,6 @@ class QuranRowWidget extends StatefulWidget {
 class _QuranRowWidgetState extends State<QuranRowWidget> {
   @override
   Widget build(BuildContext context) {
-    var theme = ThemeData();
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Row(
@@ -28,9 +27,13 @@ class _QuranRowWidgetState extends State<QuranRowWidget> {
             alignment: Alignment.center,
             children: <Widget>[
               SvgPicture.asset('assets/images/muslim.svg'),
-              Text(widget.number.toString(),
-                  style: theme.textTheme.titleSmall
-                      ?.copyWith(color: AppColors.white)),
+              Text(
+                widget.number.toString(),
+                style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: AppColors.white),
+              ),
             ],
           ),
           const SizedBox(
@@ -42,13 +45,17 @@ class _QuranRowWidgetState extends State<QuranRowWidget> {
               children: [
                 Text(
                   widget.title,
-                  style: theme.textTheme.bodyLarge
-                      ?.copyWith(color: AppColors.white),
+                  style: const TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w600,
+                      color: AppColors.white),
                 ),
                 Text(
                   widget.subTitle,
-                  style: theme.textTheme.titleMedium
-                      ?.copyWith(color: AppColors.white),
+                  style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.white),
                 ),
               ],
             ),

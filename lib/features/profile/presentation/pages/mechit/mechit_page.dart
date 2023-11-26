@@ -44,7 +44,7 @@ class _MechitPageState extends State<MechitPage> {
                     Mechit mechit = mechitList[index];
                     return Container(
                       width: double.infinity,
-                      height: 73.0,
+                      height: MediaQuery.of(context).size.height * 0.09,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         color: AppColors.bgColor,

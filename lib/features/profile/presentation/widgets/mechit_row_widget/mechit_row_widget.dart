@@ -31,16 +31,17 @@ class MechitRowwidget extends StatelessWidget {
                   children: [
                     Text(
                       mechit.name,
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            color: AppColors.white,
-                          ),
+                      style: const TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white),
                     ),
                     Text(
                       mechit.address,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: const Color(0xff9BB6C7),
-                            fontSize: 15,
-                          ),
+                      style: const TextStyle(
+                          color: AppColors.darkgrey,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),

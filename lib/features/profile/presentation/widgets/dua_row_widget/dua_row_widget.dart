@@ -16,7 +16,6 @@ class DuaRowWidget extends StatefulWidget {
 class _DuaRowWidgetState extends State<DuaRowWidget> {
   @override
   Widget build(BuildContext context) {
-    var theme = ThemeData();
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16),
       child: Row(
@@ -25,7 +24,10 @@ class _DuaRowWidgetState extends State<DuaRowWidget> {
           const SizedBox(width: 8),
           Text(
             widget.title,
-            style: theme.textTheme.bodyLarge?.copyWith(color: AppColors.white),
+            style: const TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w400,
+                color: AppColors.white),
           ),
         ],
       ),
