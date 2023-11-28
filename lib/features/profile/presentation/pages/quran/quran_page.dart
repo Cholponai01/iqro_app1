@@ -20,18 +20,6 @@ class _QuranPageState extends State<QuranPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(
-            Icons.chevron_left_outlined,
-            size: 40,
-            color: AppColors.white,
-          ),
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-        ),
         title: const Text("Аль-Фатиха",
             style: TextStyle(
               fontSize: 17,

@@ -17,6 +17,11 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
+        title: const Text("Дубалардын тизмеси",
+            style: TextStyle(
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                color: AppColors.white)),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 18, right: 20),

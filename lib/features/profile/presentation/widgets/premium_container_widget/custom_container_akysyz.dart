@@ -34,7 +34,7 @@ class _CustomContainerAkysyzState extends State<CustomContainerAkysyz> {
         ),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Text(
             "Акысыз",

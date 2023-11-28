@@ -52,18 +52,6 @@ class _DuaPageState extends State<DuaPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.bgColor,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(
-            Icons.chevron_left_outlined,
-            size: 40,
-            color: AppColors.white,
-          ),
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-        ),
         title: const Text(
           "Дуа",
           style: TextStyle(

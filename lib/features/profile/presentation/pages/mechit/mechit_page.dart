@@ -14,18 +14,6 @@ class _MechitPageState extends State<MechitPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(
-            Icons.chevron_left_outlined,
-            size: 40,
-            color: AppColors.white,
-          ),
-          highlightColor: Colors.transparent,
-          splashColor: Colors.transparent,
-        ),
         title: const Text("Мечеттерди издөө",
             style: TextStyle(color: AppColors.white)),
         backgroundColor: AppColors.bgColor,
