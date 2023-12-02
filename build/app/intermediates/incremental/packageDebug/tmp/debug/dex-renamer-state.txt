@@ -1,4 +1,4 @@
-#Sat Dec 02 15:47:55 ALMT 2023
+#Sat Dec 02 19:59:06 ALMT 2023
 base.0=D\:\\iqro_app1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

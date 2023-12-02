@@ -11,6 +11,10 @@ class FindTheWordsPage extends StatefulWidget {
 }
 
 class _FindTheWordsPageState extends State<FindTheWordsPage> {
+  bool _isContainerFilled = false;
+  Color _containerColor = AppColors.white;
+  Color _borderColor = AppColors.bgColor;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,18 +40,86 @@ class _FindTheWordsPageState extends State<FindTheWordsPage> {
               fontWeight: FontWeight.w700,
             ),
           ),
+          sizeVertical(107),
           GestureDetector(
             onTap: () {
-              setState(() {});
+              setState(() {
+                _isContainerFilled
+                    ? _containerColor = AppColors.white
+                    : _containerColor = AppColors.green;
+                _isContainerFilled = !_isContainerFilled;
+                _borderColor =
+                    _isContainerFilled ? AppColors.green : AppColors.bgColor;
+              });
             },
             child: Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.1,
               decoration: BoxDecoration(
-                  color: AppColors.white,
+                  color: _containerColor,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: AppColors.bgColor,
+                    color: _borderColor,
+                  )),
+              child: const Center(
+                child: Text("مرحبًا",
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.w400,
+                    )),
+              ),
+            ),
+          ),
+          sizeVertical(15),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                _isContainerFilled
+                    ? _containerColor = AppColors.white
+                    : _containerColor = AppColors.green;
+                _isContainerFilled = !_isContainerFilled;
+                _borderColor =
+                    _isContainerFilled ? AppColors.green : AppColors.bgColor;
+              });
+            },
+            child: Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.1,
+              decoration: BoxDecoration(
+                  color: _containerColor,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: _borderColor,
+                  )),
+              child: const Center(
+                child: Text("مرحبًا",
+                    style: TextStyle(
+                      fontSize: 36,
+                      fontWeight: FontWeight.w400,
+                    )),
+              ),
+            ),
+          ),
+          sizeVertical(15),
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                _isContainerFilled
+                    ? _containerColor = AppColors.white
+                    : _containerColor = AppColors.green;
+                _isContainerFilled = !_isContainerFilled;
+                _borderColor =
+                    _isContainerFilled ? AppColors.green : AppColors.bgColor;
+              });
+            },
+            child: Container(
+              width: double.infinity,
+              height: MediaQuery.of(context).size.height * 0.1,
+              decoration: BoxDecoration(
+                  color: _containerColor,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: _borderColor,
                   )),
               child: const Center(
                 child: Text("مرحبًا",
