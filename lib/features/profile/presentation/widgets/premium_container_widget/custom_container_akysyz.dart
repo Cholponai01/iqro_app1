@@ -45,7 +45,7 @@ class _CustomContainerAkysyzState extends State<CustomContainerAkysyz> {
             child: ListView.builder(
                 itemCount: akysyz.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return SizedBox(
+                  return Container(
                     height: Checkbox.width + 10,
                     child: Row(
                       children: [
