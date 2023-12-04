@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 import 'package:iqro/features/profile/presentation/pages/calendar/calendar_page.dart';
 import 'package:iqro/features/profile/presentation/pages/dua/dua_page.dart';
 import 'package:iqro/features/profile/presentation/pages/mechit/mechit_page.dart';
@@ -15,7 +16,7 @@ enum PresenterPage {
   quranPage,
   mechitPage,
   calendarPage,
-  duaPage, /* diğer sayfalar */
+  duaPage,
 }
 
 void _navigateToPage(BuildContext context, PresenterPage page) {
@@ -40,8 +41,6 @@ void _navigateToPage(BuildContext context, PresenterPage page) {
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const DuaPage()));
       break;
-    // Diğer sayfalar için de aynı şekilde devam edebilirsiniz
-    // ...
   }
 }
 
@@ -59,42 +58,39 @@ class _HomePageState extends State<HomePage> {
     var theme = ThemeData();
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: AppColors.bgColor,
           title: Padding(
-            padding: const EdgeInsets.only(
-              left: 172,
-            ),
-            child: Container(
+            padding: const EdgeInsets.only(left: 172),
+            child: SizedBox(
               width: 134,
               height: 26,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: AppColors.white),
-              child: Center(
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const PremiumPage(),
-                        ));
-                  },
-                  child: const Text("Премиум",
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5.0),
+                    color: AppColors.white),
+                child: Center(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PremiumPage(),
+                          ));
+                    },
+                    child: const Text("Премиум",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w700)),
+                  ),
                 ),
               ),
             ),
           ),
           actions: [
             Padding(
-              padding: const EdgeInsets.only(right: 11),
+              padding: const EdgeInsets.only(right: 11.0),
               child: Row(
                 children: [
                   SvgPicture.asset("assets/images/bell.svg"),
-                  const SizedBox(
-                    width: 14,
-                  ),
+                  sizeHorizontal(14),
                   SvgPicture.asset("assets/images/gearshape.svg"),
                 ],
               ),
@@ -106,43 +102,41 @@ class _HomePageState extends State<HomePage> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 20, top: 25, right: 19),
-                child: Container(
+                child: SizedBox(
                   width: double.infinity,
                   height: 133,
-                  decoration: BoxDecoration(
-                    color: AppColors.bgColor,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: 174,
-                              child: Text(
-                                "Ислам того,кто не причиняет другим мусульманам вреда своим языком и своими руками,является наилучшим.",
-                                style: theme.textTheme.bodyMedium?.copyWith(
-                                    fontWeight: FontWeight.w400,
-                                    color: AppColors.white,
-                                    height: 0),
-                                maxLines: 4,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                        color: AppColors.bgColor,
+                        borderRadius: BorderRadius.circular(10.0)),
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                width: 174,
+                                child: Text(
+                                    "Ислам того,кто не причиняет другим мусульманам вреда своим языком и своими руками,является наилучшим.",
+                                    style: theme.textTheme.bodyMedium?.copyWith(
+                                        fontWeight: FontWeight.w400,
+                                        color: AppColors.white,
+                                        height: 0),
+                                    maxLines: 4),
                               ),
-                            ),
-                            SizedBox(
-                              width: 109,
-                              child: Image.asset("assets/images/islam.png"),
-                            )
-                          ]),
+                              SizedBox(
+                                width: 109,
+                                child: Image.asset("assets/images/islam.png"),
+                              )
+                            ]),
+                      ),
                     ),
                   ),
                 ),
               ),
               //Slider
-              const SizedBox(
-                height: 25,
-              ),
+              sizeVertical(25.0),
               Text(
                 'БИШКЕК',
                 style: theme.textTheme.titleSmall?.copyWith(
@@ -153,9 +147,7 @@ class _HomePageState extends State<HomePage> {
                 style: theme.textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.w700, color: AppColors.bgColor),
               ),
-              const SizedBox(
-                height: 17,
-              ),
+              sizeVertical(17.0),
               const Padding(
                 padding: EdgeInsets.only(left: 53, right: 53),
                 child: Row(
@@ -180,9 +172,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 14,
-              ),
+              sizeVertical(14.0),
               Padding(
                 padding:
                     const EdgeInsets.only(left: 22, bottom: 113, right: 21),
