@@ -22,9 +22,10 @@ class _CustomContainerPremiumState extends State<CustomContainerPremium> {
   @override
   Widget build(BuildContext context) {
     var theme = ThemeData();
-    return Container(
-        width: 172,
-        height: 257,
+    return SizedBox(
+      width: 172,
+      height: 257,
+      child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
@@ -79,6 +80,8 @@ class _CustomContainerPremiumState extends State<CustomContainerPremium> {
                   }),
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }

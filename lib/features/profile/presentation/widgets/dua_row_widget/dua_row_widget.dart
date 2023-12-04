@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 
 class DuaRowWidget extends StatefulWidget {
   const DuaRowWidget({
@@ -21,7 +22,7 @@ class _DuaRowWidgetState extends State<DuaRowWidget> {
       child: Row(
         children: [
           SvgPicture.asset('assets/dua_svg/home.svg'),
-          const SizedBox(width: 8),
+          sizeHorizontal(8.0),
           Text(
             widget.title,
             style: const TextStyle(

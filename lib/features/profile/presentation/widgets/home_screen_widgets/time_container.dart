@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 
 class TimeContainer extends StatelessWidget {
   const TimeContainer(
@@ -12,22 +13,24 @@ class TimeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
+        SizedBox(
           width: 35.0,
           height: 35.0,
-          decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: AppColors.bgColor,
-          ),
-          child: Center(
-            child: SvgPicture.asset(
-              imagePath,
-              width: 20.0,
-              height: 20.0,
+          child: DecoratedBox(
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: AppColors.bgColor,
+            ),
+            child: Center(
+              child: SvgPicture.asset(
+                imagePath,
+                width: 20.0,
+                height: 20.0,
+              ),
             ),
           ),
         ),
-        const SizedBox(height: 8.0),
+        sizeVertical(8.0),
         Text(
           title,
           style: Theme.of(context).textTheme.bodyMedium,

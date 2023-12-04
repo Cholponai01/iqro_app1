@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 
 class QuranRowWidget extends StatefulWidget {
   const QuranRowWidget(
@@ -36,9 +37,7 @@ class _QuranRowWidgetState extends State<QuranRowWidget> {
               ),
             ],
           ),
-          const SizedBox(
-            width: 7,
-          ),
+          sizeVertical(7.0),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

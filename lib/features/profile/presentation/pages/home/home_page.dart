@@ -130,9 +130,6 @@ class _HomePageState extends State<HomePage> {
                                 maxLines: 4,
                               ),
                             ),
-                            // const SizedBox(
-                            //   width: 3,
-                            // ),
                             SizedBox(
                               width: 109,
                               child: Image.asset("assets/images/islam.png"),

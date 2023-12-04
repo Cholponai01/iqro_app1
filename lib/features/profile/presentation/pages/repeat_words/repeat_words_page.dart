@@ -18,14 +18,7 @@ class _MechitPageState extends State<RepeatWordsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text(
-            "Сөз кайталоо",
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 17,
-                fontWeight: FontWeight.w600),
-          ),
-          backgroundColor: AppColors.bgColor,
+          title: const Text("Сөз кайталоо"),
         ),
         body: Padding(
           padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
@@ -35,31 +28,32 @@ class _MechitPageState extends State<RepeatWordsPage> {
               sizeVertical(20),
               Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 50,
                     height: 50,
-                    decoration: BoxDecoration(
-                      color: AppColors.bgColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: SvgPicture.asset(
-                      "assets/images/speaker_wave.svg",
-                      width: 38,
-                      height: 22,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                          color: AppColors.bgColor,
+                          borderRadius: BorderRadius.circular(10.0)),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(11, 14, 11, 14),
+                        child:
+                            SvgPicture.asset("assets/images/speaker_wave.svg"),
+                      ),
                     ),
                   ),
                   sizeHorizontal(20),
-                  Container(
+                  SizedBox(
                     width: 50,
                     height: 50,
-                    decoration: BoxDecoration(
-                      color: AppColors.bgColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: SvgPicture.asset(
-                      "assets/images/tortoise.svg",
-                      width: 38,
-                      height: 22,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                          color: AppColors.bgColor,
+                          borderRadius: BorderRadius.circular(10.0)),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(6, 14, 6, 14),
+                        child: SvgPicture.asset("assets/images/tortoise.svg"),
+                      ),
                     ),
                   ),
                 ],
