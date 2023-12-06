@@ -19,14 +19,7 @@ class _FindTheWordsPageState extends State<FindTheWordsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Сөздөрдү тап",
-          style: TextStyle(
-              color: AppColors.white,
-              fontSize: 17,
-              fontWeight: FontWeight.w600),
-        ),
-        backgroundColor: AppColors.bgColor,
+        title: const Text("Сөздөрдү тап"),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
@@ -52,81 +45,21 @@ class _FindTheWordsPageState extends State<FindTheWordsPage> {
                     _isContainerFilled ? AppColors.green : AppColors.bgColor;
               });
             },
-            child: Container(
+            child: SizedBox(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                  color: _containerColor,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: _borderColor,
-                  )),
-              child: const Center(
-                child: Text("مرحبًا",
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w400,
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                    color: _containerColor,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: _borderColor,
                     )),
-              ),
-            ),
-          ),
-          sizeVertical(15),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _isContainerFilled
-                    ? _containerColor = AppColors.white
-                    : _containerColor = AppColors.green;
-                _isContainerFilled = !_isContainerFilled;
-                _borderColor =
-                    _isContainerFilled ? AppColors.green : AppColors.bgColor;
-              });
-            },
-            child: Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                  color: _containerColor,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: _borderColor,
-                  )),
-              child: const Center(
-                child: Text("مرحبًا",
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w400,
-                    )),
-              ),
-            ),
-          ),
-          sizeVertical(15),
-          GestureDetector(
-            onTap: () {
-              setState(() {
-                _isContainerFilled
-                    ? _containerColor = AppColors.white
-                    : _containerColor = AppColors.green;
-                _isContainerFilled = !_isContainerFilled;
-                _borderColor =
-                    _isContainerFilled ? AppColors.green : AppColors.bgColor;
-              });
-            },
-            child: Container(
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: BoxDecoration(
-                  color: _containerColor,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: _borderColor,
-                  )),
-              child: const Center(
-                child: Text("مرحبًا",
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w400,
-                    )),
+                child: const Center(
+                  child: Text("مرحبًا",
+                      style:
+                          TextStyle(fontSize: 36, fontWeight: FontWeight.w400)),
+                ),
               ),
             ),
           ),

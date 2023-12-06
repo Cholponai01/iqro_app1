@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 
 class DuaDetailPage extends StatefulWidget {
   const DuaDetailPage({super.key, required this.title});
@@ -13,41 +14,37 @@ class DuaDetailPage extends StatefulWidget {
 class _DuaDetailPageState extends State<DuaDetailPage> {
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.bgColor,
-        title: const Text("Дубалардын тизмеси",
-            style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w600,
-                color: AppColors.white)),
+        title: const Text("Дубалардын тизмеси"),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 18, right: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: AppColors.bgColor,
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.only(top: 11, bottom: 11),
-                  child: Center(
-                    child: Text(
-                      "Үйдөн чыгар алдында дуба кылуу",
-                      style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.white),
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: AppColors.bgColor,
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 11, bottom: 11),
+                    child: Center(
+                      child: Text(
+                        "Үйдөн чыгар алдында дуба кылуу",
+                        style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.white),
+                      ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 18),
+              sizeVertical(18.0),
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -65,7 +62,7 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 18),
+              sizeVertical(18.0),
               Container(
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -83,7 +80,7 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
                             fontWeight: FontWeight.w400,
                             color: AppColors.white),
                       ),
-                      const SizedBox(height: 12),
+                      sizeVertical(12.0),
                       Align(
                         alignment: Alignment.bottomRight,
                         child:
@@ -110,20 +107,20 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
                       thumbColor: AppColors.grey,
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 25, right: 25),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 25, right: 25),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           "00:36",
-                          style: theme.textTheme.titleMedium
-                              ?.copyWith(fontSize: 13),
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.w400),
                         ),
                         Text(
                           "05:39",
-                          style: theme.textTheme.titleMedium
-                              ?.copyWith(fontSize: 13),
+                          style: TextStyle(
+                              fontSize: 13, fontWeight: FontWeight.w400),
                         ),
                       ],
                     ),
@@ -133,11 +130,8 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
                     children: [
                       IconButton(
                         onPressed: () {},
-                        icon: const Icon(
-                          Icons.skip_previous,
-                          size: 30.0,
-                          color: AppColors.grey,
-                        ),
+                        icon: const Icon(Icons.skip_previous,
+                            size: 30.0, color: AppColors.grey),
                         highlightColor: Colors.transparent,
                         splashColor: Colors.transparent,
                       ),
@@ -154,15 +148,14 @@ class _DuaDetailPageState extends State<DuaDetailPage> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
-                        icon: const Icon(
-                          Icons.skip_next,
-                          size: 30.0,
-                          color: AppColors.grey,
-                        ),
-                        highlightColor: Colors.transparent,
-                        splashColor: Colors.transparent,
-                      ),
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.skip_next,
+                            size: 30.0,
+                            color: AppColors.grey,
+                          ),
+                          highlightColor: Colors.transparent,
+                          splashColor: Colors.transparent),
                     ],
                   ),
                 ],

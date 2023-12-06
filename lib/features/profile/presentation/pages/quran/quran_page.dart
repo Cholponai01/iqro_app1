@@ -20,13 +20,7 @@ class _QuranPageState extends State<QuranPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Аль-Фатиха",
-            style: TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w600,
-              color: AppColors.white,
-            )),
-        backgroundColor: AppColors.bgColor,
+        title: const Text("Аль-Фатиха"),
       ),
       body: Column(
         children: [

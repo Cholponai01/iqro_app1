@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iqro/config/theme/app_colors.dart';
+import 'package:iqro/config/theme/sized_func.dart';
 import 'package:iqro/features/profile/presentation/widgets/premium_container_widget/custom_container_akysyz.dart';
 import 'package:iqro/features/profile/presentation/widgets/premium_container_widget/custom_container_premium.dart';
 
@@ -20,7 +21,7 @@ class _PremiumPageState extends State<PremiumPage> {
           Stack(
             children: [Image.asset("assets/images/premiumImage.png")],
           ),
-          const SizedBox(height: 73),
+          sizeVertical(73.0),
           const Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Row(
@@ -31,12 +32,12 @@ class _PremiumPageState extends State<PremiumPage> {
               ],
             ),
           ),
-          const SizedBox(height: 23),
+          sizeVertical(23.0),
           Text(
             "Pro версиясын акысыз 7 күн колдонуп көрүңүз",
             style: theme.textTheme.titleMedium?.copyWith(fontSize: 13),
           ),
-          const SizedBox(height: 50),
+          sizeVertical(50.0),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: ElevatedButton(
@@ -47,7 +48,7 @@ class _PremiumPageState extends State<PremiumPage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   elevation: 0,
-                  backgroundColor: Colors.black),
+                  backgroundColor: AppColors.black),
               child: Text(
                 "Катталыңыз",
                 style: theme.textTheme.bodyLarge?.copyWith(
@@ -56,7 +57,7 @@ class _PremiumPageState extends State<PremiumPage> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          sizeVertical(20.0),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: ElevatedButton(
@@ -76,12 +77,12 @@ class _PremiumPageState extends State<PremiumPage> {
               ),
             ),
           ),
-          const SizedBox(height: 26),
+          sizeVertical(26.0),
           Text(
             "Условия использования",
             style: theme.textTheme.titleMedium?.copyWith(fontSize: 13),
           ),
-          const SizedBox(height: 6),
+          sizeVertical(6.0),
           Text(
             "Политика конфиденциальности",
             style: theme.textTheme.titleMedium?.copyWith(fontSize: 13),

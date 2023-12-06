@@ -48,17 +48,9 @@ class _DuaPageState extends State<DuaPage> {
   List<DuaPresenter> duaPresenter = duaPresenterList;
   @override
   Widget build(BuildContext context) {
-    var theme = ThemeData();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.bgColor,
-        title: const Text(
-          "Дуа",
-          style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w700,
-              color: AppColors.white),
-        ),
+        title: const Text("Дуа"),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 21, top: 30, right: 21),
@@ -97,8 +89,10 @@ class _DuaPageState extends State<DuaPage> {
                       ),
                       FittedBox(
                         child: Text(duaPresenter[index].name,
-                            style: theme.textTheme.bodyMedium
-                                ?.copyWith(color: AppColors.white)),
+                            style: const TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: AppColors.white)),
                       ),
                     ],
                   ),

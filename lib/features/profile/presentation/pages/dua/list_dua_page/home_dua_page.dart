@@ -11,15 +11,7 @@ class HomeDuaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Дубалардын тизмеси",
-          style: TextStyle(
-            fontSize: 17,
-            fontWeight: FontWeight.w600,
-            color: AppColors.white,
-          ),
-        ),
-        backgroundColor: AppColors.bgColor,
+        title: const Text("Дубалардын тизмеси"),
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
@@ -46,9 +38,7 @@ class HomeDuaPage extends StatelessWidget {
                   color: AppColors.bgColor,
                 ),
                 margin: const EdgeInsets.only(bottom: 16),
-                child: DuaRowWidget(
-                  title: DuaModel.duaNames[index],
-                ),
+                child: DuaRowWidget(title: DuaModel.duaNames[index]),
               ),
             );
           },

@@ -55,7 +55,6 @@ class _HomePageState extends State<HomePage> {
   List<ProfilePresenter> profilePresenter = profilePresenterList;
   @override
   Widget build(BuildContext context) {
-    var theme = ThemeData();
     return Scaffold(
         appBar: AppBar(
           title: Padding(
@@ -115,37 +114,40 @@ class _HomePageState extends State<HomePage> {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 width: 174,
                                 child: Text(
                                     "Ислам того,кто не причиняет другим мусульманам вреда своим языком и своими руками,является наилучшим.",
-                                    style: theme.textTheme.bodyMedium?.copyWith(
-                                        fontWeight: FontWeight.w400,
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
                                         color: AppColors.white,
                                         height: 0),
                                     maxLines: 4),
                               ),
                               SizedBox(
-                                width: 109,
-                                child: Image.asset("assets/images/islam.png"),
-                              )
+                                  width: 109,
+                                  child: Image.asset("assets/images/islam.png"))
                             ]),
                       ),
                     ),
                   ),
                 ),
               ),
-              //Slider
               sizeVertical(25.0),
-              Text(
+              const Text(
                 'БИШКЕК',
-                style: theme.textTheme.titleSmall?.copyWith(
-                    fontWeight: FontWeight.w700, color: AppColors.bgColor),
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.bgColor),
               ),
-              Text(
+              const Text(
                 '12:00',
-                style: theme.textTheme.titleMedium?.copyWith(
-                    fontWeight: FontWeight.w700, color: AppColors.bgColor),
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.bgColor),
               ),
               sizeVertical(17.0),
               const Padding(
@@ -213,8 +215,10 @@ class _HomePageState extends State<HomePage> {
                               ),
                               FittedBox(
                                 child: Text(profilePresenter[index].name,
-                                    style: theme.textTheme.bodyMedium
-                                        ?.copyWith(color: AppColors.white)),
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: AppColors.white)),
                               ),
                             ],
                           ),

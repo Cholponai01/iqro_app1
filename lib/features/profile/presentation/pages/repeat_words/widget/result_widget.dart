@@ -37,45 +37,29 @@ class ResultWidget extends StatelessWidget {
                 const Text(
                   ":5",
                   style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.grey,
-                  ),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.grey),
                 ),
                 sizeHorizontal(20),
                 const Icon(Icons.close, color: AppColors.red, size: 20),
                 const Text(
                   ":5",
                   style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: AppColors.grey,
-                  ),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.grey),
                 ),
               ],
             ),
             const Row(
               children: [
-                Icon(
-                  Icons.favorite_outline,
-                  size: 20,
-                  color: AppColors.grey,
-                ),
-                Icon(
-                  Icons.favorite_outline,
-                  size: 20,
-                  color: AppColors.red,
-                ),
-                Icon(
-                  Icons.favorite_outline,
-                  size: 20,
-                  color: AppColors.red,
-                )
+                Icon(Icons.favorite_outline, size: 20, color: AppColors.grey),
+                Icon(Icons.favorite_outline, size: 20, color: AppColors.red),
+                Icon(Icons.favorite_outline, size: 20, color: AppColors.red)
               ],
             ),
-            SvgPicture.asset(
-              "assets/images/warning_icon.svg",
-            ),
+            SvgPicture.asset("assets/images/warning_icon.svg"),
           ],
         ),
       ],
