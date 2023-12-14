@@ -129,7 +129,7 @@
     },
     {
       "name": "build_resolvers",
-      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.1",
+      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/build_resolvers-2.4.2",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -153,9 +153,9 @@
     },
     {
       "name": "built_value",
-      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.8.0",
+      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/built_value-8.8.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "characters",
@@ -591,7 +591,7 @@
     },
     {
       "name": "source_gen",
-      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/source_gen-1.4.0",
+      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/source_gen-1.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -669,7 +669,7 @@
     },
     {
       "name": "uuid",
-      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.2.1",
+      "rootUri": "file:///C:/Users/cholp/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.2.2",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -746,7 +746,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-12-11T17:50:55.815538Z",
+  "generated": "2023-12-14T17:01:50.215504Z",
   "generator": "pub",
   "generatorVersion": "3.2.0"
 }
